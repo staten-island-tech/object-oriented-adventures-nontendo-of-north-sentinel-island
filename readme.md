@@ -1,60 +1,60 @@
-# Nontendo of North Sentinel Island
-<1> Final Fantasy 178 </h2>
-	
+# Game Title - Final Fantasy 178² x 0.45
+## Player Character
+Character has inventory with potions and buff coins
+## Enemies
+3 main types of enemies (all drop different buff coins)
+### Slimes
+Green Slimes - 10 hp   
+drops 8 to 12 gold  
+damage per hit: 10  
 
--Currency based system
-
--Random hit damage - pick one to three
-
--Currency gained after beating each enemy
-
--Enemies occasionally drop notes which lead to dungeons / enemy rushes where you have to fight enemies one after another without time to heal
-
-Most of the things in the game like upgrades will cost money.
-
-# Enemies:
-
-Green slime:
+Blue Slimes - 17 hp    
+drops 12 - 15        
+damage per hit: 14
+---- all slimes have 5% chance of slimy token which gives a 10% buff in attack
 
 
-Drops 8 gold - 12 gold
-Slimy Emblem (5% drop) - 5% dmg buff 10%
-Damage: 20
- Blue slime:
-Drops 12- 15- gold
-Slimy Emblem - 5% dmg buff 10%
-Damage: 25
-Spider: (comes in swarms of 5)
+### Spider
+all spiders come in swarms of 5
+Spider - 5 hp, drops 3 gold  
+damage per hit: 9
 
-Drops 5 gold each
-Spider Symbol 
-Damage: 9
-Goblin:
-Drops 7-9
-HP = 7
-(No Special Drops)
-Damage: 
-Spear Goblin (swarms of 5)
-Drops 7 gold each
-HP = 6
-Boss Drops:
-Boss Name: “Sidh Gupta the Sigma”
-“Roguelike System”
-Increase Max HP (permanent)
-Increase Max Damage (permanent)
-Big Gold Drop (50 gold)
+### Daddy long legs 
+10 hp   
+drops 5 gold  
+damage per hit: 
 
-Upgrades:
+### Mommy longer legs 
+25 hp     
+drops 15 gold
+damage per hit:
 
--  values of upgrades (costs) increase in increments of 25.
+### Goblin
+all goblins come in swarms of 5 - 7 hp, drops 7 -9 gold
+
+### spear goblins
+6 hp, drops 7 gold and 1 spears
+
+### spear (Item)
+Obtained from killing spear goblins - cannot be reused, same damage as one sword attack except there is a 100% hit rate instead of a chance. 
+
+## Dungeons
+### Slime Dungeon 
+fight 3 blue slimes, then the boss   
+Boss: "Slime King - Amalgamaion of Slime"
+hp: 75   
+Damage per hit: 
+
+## Bosses
+### "Slime King - Amalgamaion of Slime"
+
+
+## Upgrades
+- Values of upgrades (costs) increases in increments of 25
 - NO ARMOR
-- After certain achievements. The player will increase max HP. By increments of 25
-
-SYMBOLS AND EMBLEMS HAVE A RARE DROP RATE (5 PERCENT) AND WILL PERMANENTLY BUFF STATS. 
-
-Inventory:
-Potion (25% heal): 15
-Major Potion (100% heal): 60
-Max HP boost: 50
-Sword upgrade tier 1/2/3
+- After certain achiecments, The player willincrease in max HP by increments of 25.
+  
+## Shop
+Minor otion -  Heals 25% of max hp, cost: 15 gold     
+Major Potion -  Heals 100% of max hp, cost: 60 gold
 
