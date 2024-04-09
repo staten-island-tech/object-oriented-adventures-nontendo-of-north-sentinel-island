@@ -1,6 +1,6 @@
-class Bossdrops:
+""" class Bossdrops:
     def BossDrop1 ():
-        if x.lower()  == "H":
+        if x  == "H":
             permahp + 20
         else: 
             pass
@@ -14,6 +14,8 @@ class Bossdrops:
             gold + 50
         else: 
             pass
-Bossdrops.BossDrop1()
-x = input("Congrats!!! :) Choose a boss drop (+ Perma Health, + Perma Dmg, + 50 Gold ), "H", "D", "G": ")
+x = input("Congrats!!! :) Choose a boss drop (+ Perma Health, + Perma Dmg, + 50 Gold ) H,D,G: ")
 permahp = 100
+gold = 0
+permadmg = 5 """
+class 

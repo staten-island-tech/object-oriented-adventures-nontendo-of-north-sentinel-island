@@ -1,7 +1,7 @@
 # Game Title - Final Fantasy 178² x 0.45
-## Player Character
+# Player Character
 Character has inventory with potions and buff coins
-## Enemies
+# Enemies
 3 main types of enemies (all drop different buff coins)
 ### Slimes
 Green Slimes - 10 hp   
@@ -32,10 +32,10 @@ damage per hit:
 ### Goblin
 all goblins come in swarms of 5 - 7 hp, drops 7 -9 gold
 
-### spear goblins
+### Spear goblins
 6 hp, drops 7 gold and 1 spears
 
-### spear (Item)
+#### Spear (Item)
 Obtained from killing spear goblins - cannot be reused, same damage as one sword attack except there is a 100% hit rate instead of a chance. 
 
 ## Dungeons
@@ -45,8 +45,8 @@ Boss: "Slime King - Amalgamaion of Slime"
 hp: 75   
 Damage per hit: 
 
-## Bosses
-### "Slime King - Amalgamaion of Slime"
+# Bosses
+## "Slime King - Amalgamaion of Slime"
 
 
 ## Upgrades
