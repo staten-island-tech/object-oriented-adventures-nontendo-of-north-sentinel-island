@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Green Slime",
+        "hp": 10,
+        "golddrop": [8,11,12],
+        "dmgperhit": 10
+    }
+    {
+        "name": "Blue Slime",
+        "hp": 17,
+        "golddrop": [12,13,14,15],
+        "dmgperhit": 14,
+        "loot": ["Slimey Emblem"]
+    }
+    {
+        "name": "Spider":
+    }
+]
+    
