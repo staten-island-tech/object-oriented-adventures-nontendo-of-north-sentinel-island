@@ -22,21 +22,27 @@ damage per hit: 9
 ### Daddy long legs 
 10 hp   
 drops 5 gold  
-damage per hit: 
+damage per hit: 15
 
 ### Mommy longer legs 
 25 hp     
 drops 15 gold
-damage per hit:
+damage per hit: 20
 
 ### Goblin
-all goblins come in swarms of 5 - 7 hp, drops 7 -9 gold
+all goblins come in swarms of 5     
+7 hp    
+drops 7 -9 gold
 
 ### Spear goblins
-6 hp, drops 7 gold and 1 spears
+6 hp    
+drops 7 gold and 1 spears
 
-#### Spear (Item)
-Obtained from killing spear goblins - cannot be reused, same damage as one sword attack except there is a 100% hit rate instead of a chance. 
+### Spear (Item)
+Obtained from killing spear goblins 
+Cannot be reused
+Damage: same damage as one sword attack except there is a 100% hit rate instead of a chance. 
+
 
 ## Dungeons
 ### Slime Dungeon 
@@ -57,4 +63,4 @@ Damage per hit:
 ## Shop
 Minor otion -  Heals 25% of max hp, cost: 15 gold     
 Major Potion -  Heals 100% of max hp, cost: 60 gold
-
+"Slime King - Amalgamaion of Slim
