@@ -38,7 +38,7 @@ import random
 Enemy.encounter(random)
 ```
 
-### Slimes
+## Slimes
 Green Slimes - 10 hp   
 drops 8 to 12 gold  
 damage per hit: 10  
@@ -49,27 +49,27 @@ damage per hit: 14
 ---- all slimes have 5% chance of slimy token which gives a 10% buff in attack
 
 
-### Spider
+## Spider
 all spiders come in swarms of 5
 Spider - 5 hp, drops 3 gold  
 damage per hit: 9
 
-### Daddy long legs 
+## Daddy long legs 
 10 hp   
 drops 5 gold  
 damage per hit: 15
 
-### Mommy longer legs 
+## Mommy longer legs 
 25 hp     
 drops 15 gold
 damage per hit: 20
 
-### Goblin
+## Goblin
 all goblins come in swarms of 5     
 7 hp    
 drops 7 -9 gold
 
-### Spear goblins
+## Spear goblins
 6 hp    
 drops 7 gold and 1 spears
 
@@ -101,7 +101,7 @@ Either 20 or 25 DMG per attack
 
 
 # Bosses
-## "Slime King - Amalgamaion of Slime"
+## "Slime King - Amalgamation of Slime"
 ![](https://static.wikia.nocookie.net/terraria_gamepedia/images/9/93/King_Slime.gif/revision/latest/scale-to-width-down/166?cb=20200523113558)
 ## "Gobzilla - Humanity's Punishment"
 ![](https://www.spriters-resource.com/resources/sheet_icons/51/54580.png?updated=1460951294)
@@ -115,6 +115,10 @@ Either 20 or 25 DMG per attack
 - After certain achiecments, The player willincrease in max HP by increments of 25.
   
 ## Shop
-Minor otion -  Heals 25% of max hp, cost: 15 gold     
+Minor Potion -  Heals 25% of max hp, cost: 15 gold     
 Major Potion -  Heals 100% of max hp, cost: 60 gold
-"Slime King - Amalgamaion of Slim
+Upgrades to attack: - 
+25 gold - Tier 1 -
+50 gold - Tier 2 -
+75 gold - Tier 3 -
+100 gold - Tier 4 -
