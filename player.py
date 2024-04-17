@@ -11,13 +11,16 @@ class player:
        
         print("                                                                                                                                                               ") 
         print(information) 
-        print("                                                                                                                                                               ") 
-        print("Here is some useful data:")
-        print(stuff)
-     start = input('Type START to begin:')
+        infoquestion = input("input space to continue")
+        if infoquestion == " ":
+          print("                                                                                                                                                               ") 
+          print("Here is some useful data:")
+          print(stuff)
+     start = input('Type START to begin: ')
      if start == 'start' or 'START':
       print("Good Luck")
-    def statsinv():
+   
+ def statsinv():
       import random
       hp = 100
       upg = 0
@@ -31,8 +34,7 @@ class player:
         dmg = random.randint(11,13)
       potioncount = 0
       bigpotioncount = 0
-      inventory = ["Potions-"{potioncount}, "Big Potions-"{bigpotioncount}]
-
+      inventory = ["Potions-" f {potioncount}, "Big Potions-"{bigpotioncount}]
 
 
 player.intro()
