@@ -1,5 +1,5 @@
 from readmeimport import stuff
-
+import time
 
 class player: 
     def intro():
@@ -13,6 +13,7 @@ class player:
         print(information) 
         infoquestion = input("input space to continue")
         if infoquestion == " ":
+          time.sleep
           print("                                                                                                                                                               ") 
           print("Here is some useful data:")
           print(stuff)
@@ -34,7 +35,7 @@ class player:
         dmg = random.randint(11,13)
       potioncount = 0
       bigpotioncount = 0
-      inventory = ["Potions-" f {potioncount}, "Big Potions-"{bigpotioncount}]
+      inventory = ["Potions-"{potioncount}, "Big Potions-"{bigpotioncount}]
 
 
 player.intro()
