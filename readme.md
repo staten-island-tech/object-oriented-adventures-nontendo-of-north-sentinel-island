@@ -83,8 +83,8 @@ Damage: same damage as one sword attack except there is a 100% hit rate instead 
 ## Slime Dungeon 
 fight 3 blue slimes, then the boss   
 Boss: "Slime King - Amalgamaion of Slime"
-hp: 75   
-Damage per hit: 
+75 HP
+Either 12 or 15 DMG per attack
 
 ## Goblin Dungeon
 fight two swarms of goblins , or 5 each back to back, then boss
@@ -112,13 +112,13 @@ Either 20 or 25 DMG per attack
 ## Upgrades
 - Values of upgrades (costs) increases in increments of 25
 - NO ARMOR
-- After certain achiecments, The player willincrease in max HP by increments of 25.
+- After certain achievements, The player will increase in max HP by increments of 25.
   
 ## Shop
 Minor Potion -  Heals 25% of max hp, cost: 15 gold     
 Major Potion -  Heals 100% of max hp, cost: 60 gold
 Upgrades to attack: - 
-25 gold - Tier 1 -
-50 gold - Tier 2 -
-75 gold - Tier 3 -
-100 gold - Tier 4 -
+25 gold - Tier 1 - +15% dmg
+50 gold - Tier 2 - +15% dmg
+75 gold - Tier 3 - +15% dmg
+100 gold - Tier 4 - +15% dmg
