@@ -1,4 +1,5 @@
-import readme.md
+from readmeimport import stuff
+
 
 class player: 
     def intro():
@@ -7,7 +8,12 @@ class player:
      print(f"Welcome! {playername} to the world of Final Fantasy 178²")
      infoquestion = input('Would you like to read the manual? (Y/N) :')
      if infoquestion == 'Y':
-        print(information) and print(readme.md)
+       
+        print("                                                                                                                                                               ") 
+        print(information) 
+        print("                                                                                                                                                               ") 
+        print("Here is some useful data:")
+        print(stuff)
      start = input('Type START to begin:')
      if start == 'start' or 'START':
       print("gl")
