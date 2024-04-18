@@ -20,6 +20,7 @@ class player:
     def statsinv():
       import random
       hp = 100
+      gold = 0
       upg = 0
       if upg == 0:
        dmg = int(random.randint(5,7))
@@ -31,9 +32,37 @@ class player:
         dmg = int(random.randint(11,13))
       potioncount = 0
       bigpotioncount = 0
-      inventory = ["Potions-"{potioncount}, "Big Potions-"{bigpotioncount}]
+      upgradeprice = 25
+    def shopinteract(playername,upgradeprice,gold,potioncount, bigpotioncount,upg):
+      print(f"Welcome to the Shop {playername}")
+      shopquestion = input(f"What do you wish to buy? (Potion - 15, Big Potion - 60, upgrade{upgradeprice}) or exit:")
+      if shopquestion == 'Potion' or shopquestion =="potion":
+        gold - 15
+        if gold<0:
+          print("You do not have enough gold!")
+          gold + 15
+        potioncount + 1
+        print("You bought a Potion!")
+      elif shopquestion == 'Big Potion' or shopquestion == 'BigPotion' or shopquestion == 'bigpotion' or shopquestion =='big potion':
+        gold - 60
+        if gold<0:
+          print("You do not have enough gold!")
+          gold + 60
+        bigpotioncount + 1
+      elif shopquestion == "Upgrade" or shopquestion == "upgrade":
+        gold - upgradeprice
+        if gold<0:
+          print("You do not have enough gold!")
+          gold + upgradeprice
+        upg + 1
+        upgradeprice + 25
+
+         
+        
 
 
 
 
-player.intro()
+
+
+
