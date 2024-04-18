@@ -3,7 +3,7 @@ class Enemy:
     def encounter(random):
      while hp != 0:
         print('You have encountered a goblin!')
-        enemy = 100
+        enemy = 7
         move = input("What will you do (attack, heal, run):")
         if move == "attack":
             randomnumber = random.randint(1,3)

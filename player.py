@@ -1,5 +1,5 @@
 from readmeimport import stuff
-
+import time
 
 class player: 
     def intro():
@@ -8,12 +8,18 @@ class player:
      print(f"Welcome! {playername} to the world of Final Fantasy 178²")
      infoquestion = input('Would you like to read the manual? (Y/N) :')
      if infoquestion == 'Y':
-       
         print("                                                                                                                                                               ") 
         print(information) 
-        print("                                                                                                                                                               ") 
-        print("Here is some useful data:")
-        print(stuff)
+        infoquestion = input("input space to continue")
+        if infoquestion == " ":
+          time.sleep
+          print("                                                                                                                                                               ") 
+          print("Here is some useful data:")
+          print(stuff)
+     start = input('Type START to begin: ')
+     print("                                                                                                                                                               ") 
+     print("Here is some useful data:")
+     print(stuff)
      start = input('Type START to begin:')
      if start == 'start' or 'START':
       print("Good Luck")
@@ -32,6 +38,7 @@ class player:
         dmg = int(random.randint(11,13))
       potioncount = 0
       bigpotioncount = 0
+
       upgradeprice = 25
     def shopinteract(playername,upgradeprice,gold,potioncount, bigpotioncount,upg):
       print(f"Welcome to the Shop {playername}")
@@ -59,9 +66,6 @@ class player:
 
          
         
-
-
-
 
 
 
