@@ -10,10 +10,7 @@ class player:
      if infoquestion == 'Y':
         print("                                                                                                                                                               ") 
         print(information) 
-<<<<<<< HEAD
 
-=======
->>>>>>> 95d53744513c4afb2f58fc798ab2d7344d9396c5
         infoquestion = input("input space to continue")
         if infoquestion == " ":
           time.sleep
@@ -21,15 +18,13 @@ class player:
           print("Here is some useful data:")
           print(stuff)
      start = input('Type START to begin: ')
-<<<<<<< HEAD
   
 
-=======
      print("                                                                                                                                                               ") 
      print("Here is some useful data:")
      print(stuff)
      start = input('Type START to begin:')
->>>>>>> 95d53744513c4afb2f58fc798ab2d7344d9396c5
+
      if start == 'start' or 'START':
       print("Good Luck")
     def statsinv():
@@ -47,9 +42,7 @@ class player:
         dmg = int(random.randint(11,13))
       potioncount = 0
       bigpotioncount = 0
-<<<<<<< HEAD
-=======
-
+    
       upgradeprice = 25
     def shopinteract(playername,upgradeprice,gold,potioncount, bigpotioncount,upg):
       print(f"Welcome to the Shop {playername}")
@@ -76,9 +69,5 @@ class player:
         upgradeprice + 25
 
          
-        
-
-
-
->>>>>>> 95d53744513c4afb2f58fc798ab2d7344d9396c5
+      
 
