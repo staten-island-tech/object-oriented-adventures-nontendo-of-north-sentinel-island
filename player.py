@@ -7,7 +7,7 @@ class player:
      if infoquestion == 'Y':
         print(information)
      start = input('Type START to begin:')
-     if start == 'start' or 'START':
+     if start == 'start'.lower() or 'START'.upper():
         print('placeholder')
      else:
         exit
