@@ -4,17 +4,20 @@ class Enemy:
     import random
     def encounter(random):
      hp = 100
+     print('You have encountered a goblin!')
      while hp != 0:
-        print('You have encountered a goblin!')
         enemy = 7
-        move = input("what would you like to do now?: Attack, Heal, shop interact, Run, Exit game")
+        if enemy <= 0:
+           break
+        move = input("what would you like to do now?: Attack, Heal, Run")
         if move == "Attack":
             randomnumber = random.randint(1,3)
             attacknumber = input("pick a number 1-3 :")
             if attacknumber == randomnumber:
-                enemy - 15
-            else:
                 print("You missed!")
+            else:
+                print('You hit the enemy for 5 hp!')
+                enemy - 5
         if move == "Run":
             break
         if move == "heal":
@@ -29,10 +32,7 @@ class Enemy:
                  bigpotioncount - 1
             else:
               print("You do not have any potions!")
-            if "shopinteract": 
-                import shopinteract
-            if "Exit game":
-                end
+     print('You defeated the goblin')
 import random             
 Enemy.encounter(random)
 
