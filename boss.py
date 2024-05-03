@@ -18,6 +18,4 @@ class enemydrops:
         else: 
             pass
 x = input("Congrats!!! :) Choose a boss drop (+ Perma Health, + Perma Dmg, + 50 Gold ) H,D,G: ")
-permahp = 100
-gold = 0
-permadmg = 5 
+
