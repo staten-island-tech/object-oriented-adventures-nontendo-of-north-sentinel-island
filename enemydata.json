@@ -3,17 +3,71 @@
         "name": "Green Slime",
         "hp": 10,
         "golddrop": [8,11,12],
-        "dmgperhit": 10
-    }
+        "dmgperhit": 10,
+        "loot": ["Slimey Emblem"]
+    },
     {
         "name": "Blue Slime",
         "hp": 17,
         "golddrop": [12,13,14,15],
         "dmgperhit": 14,
         "loot": ["Slimey Emblem"]
-    }
+    },
     {
-        "name": "Spider"
+        "name": "Spider",
+        "hp":5,
+        "golddrop":3,
+        "dmgperhit":9,
+        "loot":["Legged Emblem"]
+    },
+    {
+        "name": "Daddy Long Legs",
+        "hp":10,
+        "golddrop":5,
+        "dmgperhit":15,
+        "loot":["Legged Emblem"]
+    },
+    {
+        "name": "Mommy Longer Legs",
+        "hp":25,
+        "golddrop":15,
+        "dmgperhit":20,
+        "loot":["Legged Emblem"]
+    },
+    {
+        "name": "Goblin",
+        "hp":7,
+        "golddrop":8,
+        "dmgperhit":6,
+        "loot":["Goblin Emblem"]
+    },
+    {
+        "name": "Spear Goblin",
+        "hp":6,
+        "golddrop":7,
+        "dmgperhit":8,
+        "loot":["Goblin Emblem"]
+    },
+    {
+        "name": "Slime King",
+        "hp":75,
+        "golddrop":0,
+        "dmgperhit":14,
+        "loot":[""]
+    },
+    {
+        "name": "Gobzilla",
+        "hp":100,
+        "golddrop":0,
+        "dmgperhit":17,
+        "loot":[""]
+    },
+    {
+        "name": "Spidorah",
+        "hp":125,
+        "golddrop":0,
+        "dmgperhit":23,
+        "loot":[""]
     }
 ]
     
