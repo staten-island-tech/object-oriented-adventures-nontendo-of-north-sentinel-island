@@ -21,7 +21,7 @@ class player:
 
 
      if start == 'start' or 'START':
-      print("Good Luck")
+      print("Be Prepared For An Awesome Adventure")
     def statsinv():
       import random
       hp = 100
