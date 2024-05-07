@@ -1,8 +1,8 @@
 
   
 class Enemy:
-    import random
     def encounter(random):
+     import random
      hp = 100
      print('You have encountered a goblin!')
      while hp != 0:
