@@ -38,5 +38,66 @@ Enemy.encounter(random)
 
         
 
-
+class enemydata():
+    def green_slime(self):
+        self.name = "Green Slime"
+        self.hp = 10
+        self.golddrop = 8
+        self.dmgperhit = 10
+        self.loot = "Slimey Emblem"
+    def blue_slime(self):
+        self.name = "Blue Slime"
+        self.hp = 17
+        self.golddrop = 12
+        self.dmgperhit = 14
+        self.loot = "Slimey Emblem"
+    def spider(self):
+        self.name = "Spider"
+        self.hp = 5
+        self.golddrop = 3
+        self.dmgperhit = 9
+        self.loot = "Legged Emblem"
+    def daddy_long_legs(self):
+        self.name = "Daddy Long Legs"
+        self.hp = 10
+        self.golddrop = 5
+        self.dmgperhit = 15
+        self.loot = "Legged Emblem"
+    def mommy_longer_legs(self):
+        self.name = "Mommy Longer Legs"
+        self.hp = 25
+        self.golddrop = 15
+        self.dmgperhit = 20
+        self.loot = "Legged Emblem"
+    def goblin(self):
+        self.name = "Goblin"
+        self.hp = 7
+        self.golddrop = 8
+        self.dmgperhit = 6
+        self.loot = "Goblin Emblem"
+    def spear_goblin(self):
+        self.name = "Spear Goblin"
+        self.hp = 6
+        self.golddrop = 7
+        self.dmgperhit = 8
+        self.loot = "Legged Emblem"
+    def slime_king(self):
+        self.name = "Slime King"
+        self.hp = 75
+        self.golddrop = 0
+        self.dmgperhit = 14
+        self.loot = ""
+    def gobzilla(self):
+        self.name = "Spider"
+        self.hp = 100
+        self.golddrop = 0
+        self.dmgperhit = 17
+        self.loot = ""
+    def spidorah(self):
+        self.name = "Spider"
+        self.hp = 125
+        self.golddrop = 0
+        self.dmgperhit = 23
+        self.loot = ""
+   
     
