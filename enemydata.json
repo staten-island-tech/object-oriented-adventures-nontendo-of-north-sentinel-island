@@ -2,31 +2,16 @@
     {
         "name": "Green Slime",
         "hp": 10,
-        "golddrop": [8,11,12],
+        "golddrop": 8,
         "dmgperhit": 10,
         "loot": ""
     },
     {
         "name": "Blue Slime",
         "hp": 17,
-        "golddrop": [12,13,14,15],
+        "golddrop": 12,
         "dmgperhit": 14,
         "loot": ["Slimey Emblem"]
-    },
-    {
-        "name": "Spider"
-    },
-    {
-        "name": "Slime King - Amalgamation of Slime",
-        "hp": 75,
-        "gold": 20,
-        "dmgperhit": [12,13,14,15]
-    },
-    {
-        "name": "Gobzilla - Humanity's Punishment",
-        "hp": 100,
-        "gold": 20,
-        "dmgperhit": [15,16,17,18,19,20]
     },
     {
         
