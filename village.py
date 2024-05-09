@@ -1,6 +1,7 @@
 import time
 import sys
 
+
 class village:
     def enteringvillage(): 
       print("You are now entering the village...")

@@ -1,11 +1,6 @@
 
-import time
-import sys
-
-
 from player import player
 from village import village
-
 
 
 player.intro()
