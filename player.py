@@ -28,6 +28,7 @@ if x == "fast":
 class player: 
   
   def intro():
+    from readmeimport import stuff
     x = input
     information = ('Welcome to Object Orientated Aventures! In this game, you will progressivley fight abominations in order to survive.   Each abomination has different stats, characteristics, and may drop useful items. Your goal is to defeat the three dungeons and then the final boss in order to escape. (Dont forget to upgrade our stts in the shop!) Here is some infornmation that can help you on your journey:')
     playername = input('What is the name of your Adventurer?:')

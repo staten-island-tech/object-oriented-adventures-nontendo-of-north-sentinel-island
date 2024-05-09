@@ -6,6 +6,7 @@ team = json.load(f)
 print(team['player'])
 print(team['player']['health'])
 print(team['player']['dmg'])
+healthleft = team['player']['health']
 print('You have''health left')
 
 

@@ -1,4 +1,12 @@
-from enemy import Enemy
-from boss import enemydrops
-import time 
+
+import time
+import sys
+
+
 from player import player
+from village import village
+
+
+
+player.intro()
+village.enteringvillage()
