@@ -5,7 +5,7 @@ import random
 class playercombat:
 
     
-
+    def fight():
         hitpool = random.randint(1,3)
         while True: 
             initiater = input("Choose between (H/C/E) to initiate your actions: ")
@@ -19,3 +19,5 @@ class playercombat:
              break
             if guesser != hitpool:
              print("You didn't hit your attack :( ")
+
+playercombat.fight()
