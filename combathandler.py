@@ -6,12 +6,12 @@ class playercombat:
 
     
 
-        hitpool = random.randint(1,3)
+        hitpool = random.randint(1,2)
         while True: 
             initiater = input("Choose between (H/C/E) to initiate your actions: ")
             if initiater.upper() == "C":
-                combatter = print("Choose Between 1-3, to hit your attack!")
-            guesser = int(input("(1,2,3): "))
+                combatter = print("Choose Between 1-2, to hit your attack!")
+            guesser = int(input("(1,2): "))
             
             if guesser == hitpool:
              print("You hit your attack!")
