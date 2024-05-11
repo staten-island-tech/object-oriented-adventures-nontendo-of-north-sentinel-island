@@ -1,121 +1,104 @@
 import json
 import random 
+from shop import visit_shop
 
-class Enemy: 
-    def __init__(self, name, hp, damage, gold_drop, loot):
+class Player:
+    def __init__(self, name, max_hp=100):
         self.name = name
-        self.hp = hp
-        self.damage = damage
-        self.gold_drop = gold_drop
-        self.loot = loot
-# placeholder :sob:
-class Potion:
-    def __init__(self, name, healing_percentage):
-        self.name = name
-        self.healing_percentage = healing_percentage
+        self.max_hp = max_hp
+        self.damage = 10
+        self.gold = 25
+        self.minor_potions = 0
+        self.major_potions = 0
+    
+    def attack(self, enemy):
+        print(f"{self.name} attacks {enemy['name']} for {self.damage} damage!")
+        enemy['hp'] -= self.damage
 
-def load_enemies():
-    with open("enemydata.json", 'r') as file:
-        enemies_data = json.load(file)
-    return [Enemy(enemy['name'], enemy['hp'], enemy['dmgperhit'], enemy['golddrop'], enemy['loot']) for enemy in enemies_data]
-def load_potions():
-    with open("potions.json", 'r') as file:
-        potions_data = json.load(file)
-    return [Potion(potion['name'], potion['healing_percentage']) for potion in potions_data]
-def main(): 
-    enemies = load_enemies()
-    potions = load_potions()
-    player_hp = 10
-    player_max_hp = 10
-    player_gold = 0 
-    #inventory is placeholdin
-    player_inventory = []
-    player_damage = 1
-    enemy_hp = 50
-    while enemies:  
+    def take_damage(self, damage):
+        self.hp -= damage
+        print(f"{self.name} takes {damage} damage.")
+    
+    def heal(self, amount):
+        self.hp = min(self.max_hp, self.hp + amount)
+    
+    def upgrade_damage(self, percentage):
+        self.damage = int(self.damage * (1 + percentage / 100))
+    
+    def upgrade_max_hp(self, percentage):
+        self.max_hp = int(self.max_hp * (1 + percentage / 100))
+        self.hp = min(self.max_hp, self.hp)
 
-        current_enemy = random.choice(enemies)
+def load_enemies(filename):
+    with open(filename, 'r') as file:
+        enemies = json.load(file)
+    return enemies
 
-        print(f"A {current_enemy.name} appears! ")
+def spawn_enemy(enemies):
+    return random.choice(enemies)
 
-    while enemy_hp > 0 and player_hp > 0:
+def main():
+    player = Player("Player")
+    enemies = load_enemies('enemydata.json')
 
-        correct_number = random.randint(1,3)
-        
-       
+    while True:
+        enemy = spawn_enemy(enemies)
+        print(f"A wild {enemy['name']} appears!")
 
-        action = input("Choose your action: Combat, Heal, Escape, (C/H/E): ").upper()
-
-        if action == "C":
-            initate = int(input("Choose a Number Between 1-3: "))
-
-            if initate == correct_number: 
-                print("You managed to hit the enemy! ")
-                current_enemy.hp -= player_damage
-                print(f"{current_enemy.name} HP: {current_enemy.hp}")
-            else: 
-                print("You missed :(. The enemy attacks!")
-
-            # enemy attacks
-            if random.random() < 0.75:
-                print("The enemy hits you!")
-                player_hp -= current_enemy.damage
-                print(f"Player HP: {player_hp}")
-            else:
-                print("The enemey missed!")
-
-        elif action == "H" and player_hp < 10: 
-            print("Select a potion to use: ")
-            for i, potion in enumerate(potions, start=1):
-                print(f"{i}, {potion.name}")
-            choice = int(input("Eneter the number of the potion: "))
-            if 1 <= choice <= len(potions):
-                chosen_potion = potions[choice - 1]
-                if chosen_potion.name == "Minor Potion":
-                    healing_amount = int(player_max_hp * chosen_potion.healing_percentage)
-                elif chosen_potion.name == "Major Potion":
-                    healing_amount = player_max_hp
+        while enemy['hp'] > 0 and player.hp > 0:
+            choice = input("Choose an action H for heal, C for combat, E for escape: ")
+            if choice.upper() == 'H':
+                if player.minor_potions> 0:
+                    player.heal(player.max_hp * 0.25)
+                    player.minor_potions -= 1
+                    print("You used a Minor Potion and healed yourself.")
+                elif player.major_potions > 0:
+                    player.heal(player.max_hp)
+                    player.major_potions -= 1
+                    print("You used a Major Potion and healed yourself fully.")
+                else: 
+                    print("You have no potions left!")
+            
+            elif choice.upper() == 'C':
+                player.attack(enemy)
+                if enemy['hp'] <= 0:
+                    print(f"{enemy['name']} defeated!")
+                    if 'golddrop' in enemy:
+                        gold_dropped = random.choice(enemy['golddrop'])
+                        player.gold += gold_dropped
+                        print(f"You found {gold_dropped} gold!")
+                    if 'loot' in enemy and random.random() < 0.05:
+                        loot = random.choice(enemy['loot'])
+                        print(f"You found {loot}!")
+                    break
+                # enemy
+                if random.random() < 0.75:
+                    print(f"{enemy['name']} attacks {player.name}!")
+                    player.take_damage(enemy['dmgperhit'])
+                    if player.hp <= 0:
+                        print("You have been defeated!")
+                        break
                 else:
-                    print("Invalid potion choice. Try again.")
-                    continue
-                player_hp = min(player_max_hp, player_hp + healing_amount)
-                print(f"You used {chosen_potion.name} and healed for {healing_amount} HP.")
-                print(f"Player HP: {player_hp}/{player_max_hp}")
-            else:
-                print("Invalid potion choice.")
-                continue
+                    print(f"{enemy['name']} misses!")
+            elif choice.upper() == 'E':
+                if random.random() < 0.05:
+                    print("You managed to escape!")
+                    break
+                else:
+                    print("Failed to escape!")
+            else: 
+                print("Invalid choice. Try again.")
 
-        elif action == "E": 
-            if random.random() < 0.05:
-                print("You succesfully escaped!") 
-                break
-            else:
-                print("Escape attempt failed. Enemy attacks! ")
-                player_hp -= current_enemy.damage
-                print(f"Player HP: {player_hp}")
+            if enemy['hp'] > 0 and player.hp > 0:
+                continue_combat = input("Do you want to continue fighting? (Y/N): ")
+                if continue_combat.lower() != "N":
+                    break
+        if player.hp <= 0:
+            break
 
-        else:
-            print("Invalid actions. ")  
-            continue
-    
-        if player_hp <= 0:
-            print("You were defeated by the enemy.")
-        break
-    else: 
-        print(f"You defeated the {current_enemy.name}!")
-        enemies.remove(current_enemy)
+        visit_shop(player)
 
-        player_gold += random.choice(current_enemy.gold_drop) if isinstance(current_enemy.gold_drop, list) else current_enemy.gold_drop
-        print(f"You gained {player_gold} gold")
-
-        if random.random < 0.05:
-            player_inventory.extend(current_enemy.loot)
-            print(f"You obtanined: {', '.join(current_enemy.loot)}")
-    
-    if not enemies:
-        print("Congratulations! You have defeated all enemies!")
-        print(f"Final gold: {player_gold}")
-        print("Final Inventory:", player_inventory)
-
-if __name__ == "__main__":
-    main() 
+        play_again = input("Do you want another instance of fighting? (Y/N): ")
+        if play_again.upper() != 'Y':
+            break        
+ 
