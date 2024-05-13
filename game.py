@@ -1,7 +1,12 @@
 
-from player import player
+import time
+import sys
+
+
+from player import user
 from village import village
 
 
-player.intro()
+
+user.intro()
 village.enteringvillage()
