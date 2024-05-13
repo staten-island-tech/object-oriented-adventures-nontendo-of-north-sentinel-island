@@ -25,7 +25,7 @@ if x == "fast":
         sys.stdout.flush()
         time.sleep(0.000001)
 
-class player: 
+class user: 
   
   def intro():
     from readmeimport import stuff
