@@ -60,7 +60,10 @@ def main():
                     print("You have no potions left!")
             
             elif choice.upper() == 'C':
-                player.attack(enemy)
+             if random.random() <= 0.8:
+                print(f"{player.name} attacks {enemy['name']}")
+                enemy['hp'] -= player.damage
+                print(f"{enemy['name']} takes {player.damage} damage!")
                 if enemy['hp'] <= 0:
                     print(f"{enemy['name']} defeated!")
                     if 'golddrop' in enemy:
@@ -69,9 +72,11 @@ def main():
                         print(f"You found {gold_dropped} gold!")
                     if 'loot' in enemy and random.random() < 0.05:
                         loot = random.choice(enemy['loot'])
-                        print(f"You found {loot}!")
+                        print(f"You found {loot}")
                     break
-                # enemy
+            else:
+                print(f"{player.name} misses the attack!")
+                 # enemy
                 if random.random() < 0.75:
                     print(f"{enemy['name']} attacks {player.name}!")
                     player.take_damage(enemy['dmgperhit'])
@@ -80,15 +85,13 @@ def main():
                         break
                 else:
                     print(f"{enemy['name']} misses!")
-            elif choice.upper() == 'E':
-                if random.random() < 0.05:
-                    print("You managed to escape!")
+                if choice.upper() == 'E':
+                    if random.random() < 0.05:
+                        print("You managed to escape!")
                     break
                 else:
                     print("Failed to escape!")
-            else: 
-                print("Invalid choice. Try again.")
-
+       
             if enemy['hp'] > 0 and player.hp > 0:
                 continue_combat = input("Do you want to continue fighting? (Y/N): ")
                 if continue_combat.lower() != "N":
