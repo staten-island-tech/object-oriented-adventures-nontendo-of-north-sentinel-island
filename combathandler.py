@@ -4,6 +4,7 @@ from shop import visit_shop
 
 class Player:
     def __init__(self, name, max_hp=100):
+        #placeholder
         self.name = name
         self.max_hp = max_hp
         self.damage = 10
@@ -45,14 +46,17 @@ def main():
         enemy = spawn_enemy(enemies)
         print(f"A wild {enemy['name']} appears!")
 
-        while enemy['hp'] > 0 and player.hp > 0:
+        while enemy['hp'] > 0 and player.max_hp > 0:
             choice = input("Choose an action H for heal, C for combat, E for escape: ")
             if choice.upper() == 'H':
-                if player.minor_potions> 0:
+                input("Do you want to use a minor or major potion? M for Minor, B for Major: ")
+                if choice.upper() == "M":
+                 if player.minor_potions > 0:
                     player.heal(player.max_hp * 0.25)
                     player.minor_potions -= 1
                     print("You used a Minor Potion and healed yourself.")
-                elif player.major_potions > 0:
+                if choice.upper() == "B":
+                 if player.major_potions > 0:
                     player.heal(player.max_hp)
                     player.major_potions -= 1
                     print("You used a Major Potion and healed yourself fully.")
@@ -60,7 +64,10 @@ def main():
                     print("You have no potions left!")
             
             elif choice.upper() == 'C':
-                player.attack(enemy)
+             if random.random() <= 0.8:
+                print(f"{player.name} attacks {enemy['name']}")
+                enemy['hp'] -= player.damage
+                print(f"{enemy['name']} takes {player.damage} damage!")
                 if enemy['hp'] <= 0:
                     print(f"{enemy['name']} defeated!")
                     if 'golddrop' in enemy:
@@ -69,9 +76,11 @@ def main():
                         print(f"You found {gold_dropped} gold!")
                     if 'loot' in enemy and random.random() < 0.05:
                         loot = random.choice(enemy['loot'])
-                        print(f"You found {loot}!")
+                        print(f"You found {loot}")
                     break
-                # enemy
+            else:
+                print(f"{player.name} misses!")
+                 # enemy
                 if random.random() < 0.75:
                     print(f"{enemy['name']} attacks {player.name}!")
                     player.take_damage(enemy['dmgperhit'])
@@ -80,25 +89,25 @@ def main():
                         break
                 else:
                     print(f"{enemy['name']} misses!")
-            elif choice.upper() == 'E':
-                if random.random() < 0.05:
-                    print("You managed to escape!")
+                if choice.upper() == 'E':
+                    if random.random() < 0.05:
+                        print("You managed to escape!")
                     break
                 else:
                     print("Failed to escape!")
-            else: 
-                print("Invalid choice. Try again.")
-
-            if enemy['hp'] > 0 and player.hp > 0:
+       
+            if enemy['hp'] > 0 and player.max_hp > 0:
                 continue_combat = input("Do you want to continue fighting? (Y/N): ")
                 if continue_combat.lower() != "N":
                     break
-        if player.hp <= 0:
+        if player.max_hp <= 0:
+            print("You have died... :( ")
             break
 
-        visit_shop(player)
 
-        play_again = input("Do you want another instance of fighting? (Y/N): ")
+
+        play_again = input("Do you want another instance of combat? (Y/N): ")
         if play_again.upper() != 'Y':
             break        
  
+main()

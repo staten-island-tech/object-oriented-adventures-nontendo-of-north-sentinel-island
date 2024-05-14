@@ -3,10 +3,10 @@ import time
 import sys
 
 
-from player import player
+from player import user
 from village import village
 
 
 
-player.intro()
+user.intro()
 village.enteringvillage()
