@@ -17,7 +17,7 @@ class Player:
         enemy['hp'] -= self.damage
 
     def take_damage(self, damage):
-        self.hp -= damage
+        self.max_hp -= damage
         print(f"{self.name} takes {damage} damage.")
     
     def heal(self, amount):
@@ -96,10 +96,6 @@ def main():
                 else:
                     print("Failed to escape!")
        
-            if enemy['hp'] > 0 and player.max_hp > 0:
-                continue_combat = input("Do you want to continue fighting? (Y/N): ")
-                if continue_combat.lower() != "N":
-                    break
         if player.max_hp <= 0:
             print("You have died... :( ")
             break
