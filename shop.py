@@ -61,3 +61,5 @@ def visit_shop(player):
                 print("Not enough gold!")
         else:
             print("Invalid choice!")
+
+visit_shop()

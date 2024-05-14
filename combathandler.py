@@ -65,6 +65,7 @@ def main():
             
             elif choice.upper() == 'C':
              if random.random() <= 0.8:
+               
                 print(f"{player.name} attacks {enemy['name']}")
                 enemy['hp'] -= player.damage
                 print(f"{enemy['name']} takes {player.damage} damage!")
