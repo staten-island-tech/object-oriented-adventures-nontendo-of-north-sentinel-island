@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Minor Potion",
+        "healing_percentage": 0.25
+    },
+    {
+        "name": "Major Potion",
+        "healing_percentage": 1
+    }
+]

@@ -1,0 +1,23 @@
+[
+{
+    "name": "Slime King",
+    "hp":75,
+    "golddrop":0,
+    "dmgperhit":14,
+    "loot":[""]
+},
+{
+    "name": "Gobzilla",
+    "hp":100,
+    "golddrop":0,
+    "dmgperhit":17,
+    "loot":[""]
+},
+{
+    "name": "Spidorah",
+    "hp":125,
+    "golddrop":0,
+    "dmgperhit":23,
+    "loot":[""]
+}
+]
