@@ -17,7 +17,7 @@ class Player:
         enemy['hp'] -= self.damage
 
     def take_damage(self, damage):
-        self.hp -= damage
+        self.max_hphp -= damage
         print(f"{self.name} takes {damage} damage.")
     
     def heal(self, amount):
@@ -88,26 +88,19 @@ def main():
                         print("You have been defeated!")
                         break
                 else:
-                    print(f"{enemy['name']} misses!")
-                if choice.upper() == 'E':
+                 print(f"{enemy['name']} misses!")
+            if choice.upper() == 'E':
                     if random.random() < 0.05:
                         print("You managed to escape!")
                     break
-                else:
+            else:
                     print("Failed to escape!")
        
             if enemy['hp'] > 0 and player.max_hp > 0:
                 continue_combat = input("Do you want to continue fighting? (Y/N): ")
-                if continue_combat.lower() != "N":
+                if continue_combat.upper() != "Y":
                     break
         if player.max_hp <= 0:
             print("You have died... :( ")
             break
-
-
-
-        play_again = input("Do you want another instance of combat? (Y/N): ")
-        if play_again.upper() != 'Y':
-            break        
- 
 main()

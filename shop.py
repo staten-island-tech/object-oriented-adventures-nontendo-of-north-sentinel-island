@@ -1,4 +1,4 @@
-
+player = "skibidi"
 def visit_shop(player):
     print("Welcome to the shop!")
     print("1. Minor Potion - Heals 0.25 of max hp, costs 15 gold")
