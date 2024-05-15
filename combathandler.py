@@ -1,6 +1,6 @@
 import json
 import random 
-from shop import visit_shop
+
 
 class Player:
     def __init__(self, name, max_hp=100):
@@ -98,6 +98,7 @@ def main():
         if player.hp > 0:
             play_again = input("Do you want another instance of combat? (Y/N): ")
             if play_again.upper() != 'Y':
+                print(f"{player.name} Has Stopped Fighting")
                 break
         else:
             print("You have died... :( ")
