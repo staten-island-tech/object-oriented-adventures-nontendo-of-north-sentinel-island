@@ -12,6 +12,15 @@ class player:
         self.minor_potions = 0
         self.major_potions = 0
     
+
+
+
+
+
+
+
+
+    
     
 x = input("whats the speed of your text? (slow, medium, fast)")
 if x == "slow":

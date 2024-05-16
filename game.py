@@ -8,5 +8,5 @@ from village import village
 
 
 
-user.intro()
+player.intro()
 village.enteringvillage()

@@ -7,7 +7,7 @@ class Player:
         #placeholder
         self.name = name
         self.max_hp = 100
-        self.damage = 10
+        self.damage = 5
         self.gold = 25
         self.minor_potions = 1
         self.major_potions = 1
