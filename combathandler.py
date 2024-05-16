@@ -1,8 +1,8 @@
 import json
 import random 
-from shop import visit_shop
 
-class player:
+
+class Player:
     def __init__(self, name, max_hp=100):
         self.name = name
         self.max_hp = max_hp
@@ -103,3 +103,4 @@ def main():
         if play_again.upper() != 'Y':
             break        
  
+main()
