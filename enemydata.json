@@ -16,35 +16,35 @@
     {
         "name": "Spider",
         "hp":5,
-        "golddrop":3,
+        "golddrop":[12,13,14,15],
         "dmgperhit":9,
         "loot":["Legged Emblem"]
     },
     {
         "name": "Daddy Long Legs",
         "hp":10,
-        "golddrop":5,
+        "golddrop":[12,13,14,15],
         "dmgperhit":15,
         "loot":["Legged Emblem"]
     },
     {
         "name": "Mommy Longer Legs",
         "hp":25,
-        "golddrop":15,
+        "golddrop":[12,13,14,15],
         "dmgperhit":20,
         "loot":["Legged Emblem"]
     },
     {
         "name": "Goblin",
         "hp":7,
-        "golddrop":8,
+        "golddrop":[12,13,14,15],
         "dmgperhit":6,
         "loot":["Goblin Emblem"]
     },
     {
         "name": "Spear Goblin",
         "hp":6,
-        "golddrop":7,
+        "golddrop":[12,13,14,15],
         "dmgperhit":8,
         "loot":["Goblin Emblem"]
     }
