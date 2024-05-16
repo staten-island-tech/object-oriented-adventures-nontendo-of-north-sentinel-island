@@ -8,5 +8,9 @@ from village import village
 
 
 
-player.intro()
+
+user.intro()
 village.enteringvillage()
+
+""" for villagequestion in village.enteringvillage:
+    if villagequestion == "Explore": """
