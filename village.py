@@ -1,6 +1,6 @@
 import time
 import sys
-
+from exploration import explore
 
 class village:
     def enteringvillage(): 
@@ -25,7 +25,7 @@ class village:
                 if greatquestion == "N":
                     break
         if villagequestion == "Explore":
-            print("call in exploration class once finished")
+            explore.explorationloop(village.enteringvillage)
         elif villagequestion == "NPC Dialouge":
             print("call in randomized npc dialouge class once finished")
         
