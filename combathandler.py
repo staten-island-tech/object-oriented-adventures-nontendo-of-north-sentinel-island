@@ -72,6 +72,8 @@ def main():
                             gold_dropped = random.choice(enemy['golddrop'])
                             player.gold += gold_dropped
                             print(f"You found {gold_dropped} gold!")
+                            print("Your total gold is now")
+                            print({player.gold})
                         if 'loot' in enemy and random.random() < 0.05:
                             loot = random.choice(enemy['loot'])
                             print(f"You found {loot}")
@@ -105,3 +107,4 @@ def main():
         
  
 
+main()
