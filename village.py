@@ -1,9 +1,9 @@
-import time
-import sys
-from exploration import explore
+
+
 
 class village:
     def enteringvillage(): 
+      from exploration import explore
       print("You are now entering the village...")
       while True: 
         villagequestion = input("What would you like to do? (Shop, Explore, NPC Dialouge(WIP)): ")
@@ -29,4 +29,3 @@ class village:
         elif villagequestion == "NPC Dialouge":
             print("call in randomized npc dialouge class once finished")
         
-village.enteringvillage()

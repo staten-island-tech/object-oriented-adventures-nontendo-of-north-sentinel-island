@@ -12,6 +12,15 @@ class player:
         self.minor_potions = 0
         self.major_potions = 0
     
+
+
+
+
+
+
+
+
+    
     
 x = input("whats the speed of your text? (slow, medium, fast)")
 if x == "slow":
@@ -72,7 +81,7 @@ class user:
            print_slow("You attack by choosing a number between 1-3 and choosing the right number means you land a hit")
            print("                                                                                                                                                               ") 
            print_slow("Good Luck")
-player.intro()
+
 
 
 

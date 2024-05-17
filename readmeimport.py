@@ -64,7 +64,6 @@ Boss name: “Gobzilla - Humanity’s Punishment”
 Either 15 or 20 DMG per attack
 
 ## Spider Dungeon
-
 fight a swarm of spiders, then a daddy and mommy long legs
 Boss Name: “Spidorah - The 24 legged Dragon”
 125 HP

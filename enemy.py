@@ -1,6 +1,7 @@
-""" 
+
   
 class Enemy:
+    import random
     def encounter(random):
      hp = 100
      while hp != 0:
@@ -9,7 +10,7 @@ class Enemy:
         move = input("what would you like to do now?: Attack, Heal, shop interact, Run, Exit game")
         if move == "Attack":
             randomnumber = random.randint(1,3)
-            attacknumber = int(input("pick a number 1-3 :"))
+            attacknumber = input("pick a number 1-3 :")
             if attacknumber == randomnumber:
                 enemy - 15
             else:
@@ -37,5 +38,5 @@ Enemy.encounter(random)
 
         
 
-hp = 100 
-     """
+
+    
