@@ -4,7 +4,7 @@ import sys
 
 
 
-class Dungeon():
+class Dungeon1():
     def print_slow(str):
         for letter in str:
             sys.stdout.write(letter)
@@ -16,14 +16,10 @@ class Dungeon():
         print("")
         print_slow("You have Entered the Dungeon")
         print("")
-        print_slow("You Have Encountered A Horde Of Slimes") 
 
     elif slimechooser.upper() == "N":
         print("")
         print_slow("You Have Returned to the Village")
         print(" ")
-        print_slow("Would you like to Stay in the Village or enter the Wilds? ")
-        w = input(" (Y/N): ")
+
     
-    if w.upper() == "Y":
-        print("You have entered the Wilds")
