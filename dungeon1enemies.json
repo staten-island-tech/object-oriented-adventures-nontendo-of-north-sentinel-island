@@ -1,0 +1,24 @@
+[
+{
+    "name": "Green Slime",
+    "hp": 10,
+    "golddrop": [8,11,12],
+    "dmgperhit": 10,
+    "loot": ["Slimey Emblem"]
+},
+{
+    "name": "Blue Slime",
+    "hp": 17,
+    "golddrop": [12,13,14,15],
+    "dmgperhit": 14,
+    "loot": ["Slimey Emblem"]
+},
+{
+    "name": "Pink Slime",
+    "hp": 25,
+    "golddrop": [15,16,17,18,19],
+    "dmgperhit": 18,
+    "loot": ["You are cool Badge"]
+
+}
+]

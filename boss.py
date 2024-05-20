@@ -1,24 +1,11 @@
-class enemydrops:
-    def enemydrop():
-        if enemy == "placeholder var":
-            gold + "placeholder int"
-    def BossDrop1():
-        if x  == "H":
-            permahp + 20
-        else: 
-            pass
-    def BossDrop2():
-        if x == "D":
-            permadmg + 5
-        else:
-            pass
-    def BossDrop3():
-        if x == "G":
-            gold + 50
-        else: 
-            pass
-x = input("Congrats!!! :) Choose a boss drop (+ Perma Health, + Perma Dmg, + 50 Gold ) H,D,G: ")
-permahp = 100
-gold = 0
-permadmg = 5 
-    
+class dungeons:
+    def dungeonsloop(func):
+        from combathandler import main
+        dungeoning = input("Are you sure you want to enter the dungeon? (Y?N): ")
+        if dungeoning == "Y":
+            print("You have entered a damp, dark dungoen...")
+            main()
+        elif dungeoning == "N":
+            print("You have returned back to the village...")
+            func()
+dungeons()

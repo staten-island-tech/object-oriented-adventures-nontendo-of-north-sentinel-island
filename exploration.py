@@ -10,4 +10,4 @@ class explore:
         elif explorationquestion == "N":
             print("You return to the village")
             func()
-
+explore()
