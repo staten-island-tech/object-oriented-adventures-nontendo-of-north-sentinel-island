@@ -1,13 +1,12 @@
-
+from readmeimport import stuff
 
 
 class village:
     def enteringvillage(): 
       from exploration import explore
-      from boss import dungeons
       print("You are now entering the village...")
       while True: 
-        villagequestion = input("What would you like to do? (Shop, Explore, NPC Dialouge(WIP), Dungeoning: ")
+        villagequestion = input("What would you like to do? (Check manual, Shop, Explore, NPC Dialouge(WIP)): ")
         while villagequestion == "Shop":
             shopquestion = input("What would you like to buy? Here are your options (Upgrade Damage - 50)(Potion - 10)(Big Potion - 50): ")
             if shopquestion  == 'Upgrade Damage':
@@ -29,6 +28,6 @@ class village:
             explore.explorationloop(village.enteringvillage)
         elif villagequestion == "NPC Dialouge":
             print("call in randomized npc dialouge class once finished")
-        elif villagequestion == "Dungeoning":
-            dungeons.dungeonsloop(village.enteringvillage)
-    
+        
+        if villagequestion == "Check manual":
+            print(stuff)
