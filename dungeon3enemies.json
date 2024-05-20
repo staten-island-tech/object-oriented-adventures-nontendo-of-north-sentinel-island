@@ -1,0 +1,30 @@
+[
+{
+    "name": "Spider",
+    "hp":5,
+    "golddrop":[12,13,14,15],
+    "dmgperhit":9,
+    "loot":["Legged Emblem"]
+},
+{
+    "name": "Daddy Long Legs",
+    "hp":10,
+    "golddrop":[12,13,14,15],
+    "dmgperhit":15,
+    "loot":["Legged Emblem"]
+},
+{
+    "name": "Mommy Longer Legs",
+    "hp":25,
+    "golddrop":[12,13,14,15],
+    "dmgperhit":20,
+    "loot":["Legged Emblem"]
+},
+{
+    "name": "Buff Spider",
+    "hp":20,
+    "golddrop":[15,16,17,18,19,20],
+    "dmgperhit":15,
+    "loot":["Legged Emblem"]
+}
+]
