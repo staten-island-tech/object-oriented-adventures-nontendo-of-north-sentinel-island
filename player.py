@@ -53,7 +53,7 @@ class user:
     playername = input('What is the name of your Adventurer?:')
     print_slow(f"Welcome! {playername} to the world of Final Fantasy 178²")
     print("                                                                                                                                                               ") 
-    infoquestion = input('Would you like to read the manual? (warning: Its alot of fricken stuff but you can come back to it later) (Y/N) :')
+    infoquestion = input('Would you like to read the manual? (WARNING:ITS ALOT) (Y/N) :')
     if infoquestion == 'Y':
        
      
