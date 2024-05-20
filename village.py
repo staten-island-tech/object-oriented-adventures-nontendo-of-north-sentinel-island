@@ -1,4 +1,4 @@
-
+from readmeimport import stuff
 
 
 class village:
@@ -6,7 +6,7 @@ class village:
       from exploration import explore
       print("You are now entering the village...")
       while True: 
-        villagequestion = input("What would you like to do? (Shop, Explore, NPC Dialouge(WIP)): ")
+        villagequestion = input("What would you like to do? (Check manual, Shop, Explore, NPC Dialouge(WIP)): ")
         while villagequestion == "Shop":
             shopquestion = input("What would you like to buy? Here are your options (Upgrade Damage - 50)(Potion - 10)(Big Potion - 50): ")
             if shopquestion  == 'Upgrade Damage':
@@ -29,3 +29,5 @@ class village:
         elif villagequestion == "NPC Dialouge":
             print("call in randomized npc dialouge class once finished")
         
+        if villagequestion == "Check manual":
+            print(stuff)
