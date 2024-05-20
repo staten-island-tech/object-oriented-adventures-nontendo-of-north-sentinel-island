@@ -101,8 +101,7 @@ def main():
        
         if player.hp > 0:
             play_again = input("Do you want another instance of combat? (Y/N): ")
-            if play_again.upper() != 'Y':
-                print(f"{player.name} Has Stopped Fighting")
+            if play_again.upper() == 'N':
                 print("You decide to lay down your sword and return to the village... COWARD!")
                 break
         else:
