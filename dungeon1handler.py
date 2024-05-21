@@ -2,7 +2,7 @@ import json
 import random
 
 class Player:
-    def __init__(self, name, max_hp=100):
+    def __init__(self, name, max_hp=1000):
         self.name = name
         self.max_hp = max_hp
         self.hp = max_hp
