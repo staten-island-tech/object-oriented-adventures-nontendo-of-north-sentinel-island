@@ -110,6 +110,9 @@ def main():
         "golddrop": 0,
         "dmgperhit": 14,
         "loot": [""]
+
+
+        
     }
     boss['current_hp'] = boss['hp']
     print(f"A wild {boss['name']} appears!")
