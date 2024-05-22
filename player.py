@@ -22,7 +22,7 @@ class player:
 
     
     
-x = input("whats the speed of your text? (slow, medium, fast)")
+x = input("What do you want the speed of your text to be? (slow, medium, fast): ")
 if x == "slow":
   def print_slow(str):
       for letter in str:
@@ -50,38 +50,38 @@ class user:
     from readmeimport import stuff
     x = input
     information = ('Welcome to Object Orientated Aventures! In this game, you will progressivley fight abominations in order to survive.   Each abomination has different stats, characteristics, and may drop useful items. Your goal is to defeat the three dungeons and then the final boss in order to escape. (Dont forget to upgrade our stts in the shop!) Here is some infornmation that can help you on your journey:')
-    playername = input('What is the name of your Adventurer?:')
+    playername = input('What is the name of your Adventurer?: ')
     print_slow(f"Welcome! {playername} to the world of Final Fantasy 178²")
-    print("                                                                                                                                                               ") 
-    infoquestion = input('Would you like to read the manual? (WARNING:ITS ALOT) (Y/N) :')
+    print("") 
+    infoquestion = input('Would you like to read the manual? (WARNING:ITS ALOT) (Y/N): ')
     if infoquestion == 'Y':
        
      
-      infoquestion = input("input space to continue")
+      infoquestion = input("Input Space to Continue: ")
     if infoquestion == " ":
           
-          print("                                                                                                                                                               ") 
+          print("") 
           print_slow("Here is some useful data:")
-          print("                                                                                                                                                               ") 
-          print("                                                                                                                                                               ") 
+          print("") 
+          print("") 
           print_slow(stuff)
           start = input('Type START to begin: ')
 
 
           if start == 'start' or 'START':
-            print("                                                                                                                                                               ") 
+            print("") 
             print_slow("You attack by choosing a number between 1-3 and choosing the right number means you land a hit")
-            print("                                                                                                                                                               ") 
-            print_slow("Good Luck")
-
+            print("") 
+            print_slow("Good Luck, ")
+            print("")
     if infoquestion == 'N':
        start = input('Type START to begin: ')
        if start == 'start' or 'START':
-           print("                                                                                                                                                               ") 
+           print("") 
            print_slow("You attack by choosing a number between 1-3 and choosing the right number means you land a hit")
-           print("                                                                                                                                                               ") 
-           print_slow("Good Luck")
-
+           print("") 
+           print_slow("Good Luck, ")
+           print("")
 
 
 
