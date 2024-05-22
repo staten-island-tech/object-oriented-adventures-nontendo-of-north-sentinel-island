@@ -53,7 +53,7 @@ class user:
     playername = input('What is the name of your Adventurer?:')
     print_slow(f"Welcome! {playername} to the world of Final Fantasy 178²")
     print("                                                                                                                                                               ") 
-    infoquestion = input('Would you like to read the manual? (WARNING:ITS ALOT) (Y/N) :')
+    infoquestion = input('Would you like to read the manual? (ITS ALOT but you can come back to it later) (Y/N) :')
     if infoquestion == 'Y':
        
      
@@ -70,7 +70,6 @@ class user:
 
           if start == 'start' or 'START':
             print("                                                                                                                                                               ") 
-            print_slow("You attack by choosing a number between 1-3 and choosing the right number means you land a hit")
             print("                                                                                                                                                               ") 
             print_slow("Good Luck")
 
@@ -78,7 +77,6 @@ class user:
        start = input('Type START to begin: ')
        if start == 'start' or 'START':
            print("                                                                                                                                                               ") 
-           print_slow("You attack by choosing a number between 1-3 and choosing the right number means you land a hit")
            print("                                                                                                                                                               ") 
            print_slow("Good Luck")
 
