@@ -3,24 +3,9 @@ import time
 import sys
     
 
-class player:
-    def __init__(self, name, max_hp=100):
-        self.name = name
-        self.max_hp = max_hp
-        self.damage = 10
-        self.gold = 25
-        self.minor_potions = 0
-        self.major_potions = 0
-    
 
 
 
-
-
-
-
-
-    
     
 x = input("whats the speed of your text? (slow, medium, fast)")
 if x == "slow":
