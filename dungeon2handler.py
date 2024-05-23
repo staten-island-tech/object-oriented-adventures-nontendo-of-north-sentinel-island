@@ -13,6 +13,7 @@ def spawn_enemy(enemies):
     return random.choice(enemies)
 
 def main():
+    #Jack
     player = Player("Player")
     enemy = load_enemies('dungeon2enemies.json')  
 
