@@ -1,7 +1,7 @@
 import json
 import random
 from combathandler import Player
-    
+from congrats import gameend
 
 def load_enemies(filename):
     with open(filename, 'r') as file:
