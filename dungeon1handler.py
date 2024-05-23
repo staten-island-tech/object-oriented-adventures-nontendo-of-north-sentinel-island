@@ -8,8 +8,8 @@ class Player:
         self.hp = max_hp
         self.damage = 500
         self.gold = 25
-        self.minor_potions = 1
-        self.major_potions = 1
+        self.minor_potions = 100
+        self.major_potions = 100
     
     def attack(self, enemy):
         print(f"{self.name} attacks {enemy['name']} for {self.damage} damage!")

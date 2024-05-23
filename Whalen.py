@@ -7,9 +7,6 @@ def test2(user):
     return user['hp']
 
 test2(user)
-test2(user)
-test2(user)
-test2(user)
-test2(user)
-test2(user)
 print(user)
+
+
