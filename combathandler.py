@@ -87,7 +87,7 @@ def main():
                     print(f"{enemy['name']} attacks {player.name}!")
                     player.take_damage(enemy['dmgperhit'])
                     if player.hp <= 0:
-                        print("You have been diedd :( ")
+                        print("You have been died :( ")
                         break
                 else:
                     print(f"{enemy['name']} misses!")

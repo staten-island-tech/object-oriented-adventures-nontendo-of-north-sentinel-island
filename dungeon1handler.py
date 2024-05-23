@@ -6,7 +6,7 @@ class Player:
         self.name = name
         self.max_hp = max_hp
         self.hp = max_hp
-        self.damage = 5
+        self.damage = 500
         self.gold = 25
         self.minor_potions = 1
         self.major_potions = 1
