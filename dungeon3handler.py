@@ -74,46 +74,6 @@ def main():
                 else:
                     print("Failed to escape!")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     boss = {
         "name": "Spidorah",
         "hp": 125,
