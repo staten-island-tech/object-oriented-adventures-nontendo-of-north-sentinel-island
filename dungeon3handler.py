@@ -1,36 +1,7 @@
 import json
 import random
-
-class Player:
-    def __init__(self, name, max_hp=1000):
-        self.name = name
-        self.max_hp = max_hp
-        self.hp = max_hp
-        self.damage = 500
-        self.gold = 25
-        self.minor_potions = 100
-        self.major_potions = 100
-    
-    def attack(self, enemy):
-        print(f"{self.name} attacks {enemy['name']} for {self.damage} damage!")
-        enemy['hp'] -= self.damage
-
-    def take_damage(self, damage):
-        self.hp -= damage
-        print(f"{self.name} takes {damage} damage. Remaining HP: {self.hp}/{self.max_hp}")
-    
-    def heal(self, amount):
-        self.hp = min(self.max_hp, self.hp + amount)
-        print(f"{self.name} healed for {amount} HP. Current HP: {self.hp}/{self.max_hp}")
-    
-    def upgrade_damage(self, amount):
-        self.damage += amount
-        print(f"{self.name}'s damage increased by {amount}. Current damage: {self.damage}")
-
-    def upgrade_max_hp(self, amount):
-        self.max_hp += amount
-        self.hp += amount
-        print(f"{self.name}'s max HP increased by {amount}. Current HP: {self.hp}/{self.max_hp}")
+from combathandler import Player
+from congrats import gameend
 
 def load_enemies(filename):
     with open(filename, 'r') as file:
@@ -41,7 +12,6 @@ def spawn_enemy(enemies):
     return random.choice(enemies)
 
 def main():
-    #
     player = Player("Player")
     enemies = load_enemies('dungeon3enemies.json')  
 
@@ -100,19 +70,16 @@ def main():
             elif choice.upper() == 'E':
                 if random.random() < 0.05:
                     print("You managed to escape!")
-                    return
+                    break
                 else:
                     print("Failed to escape!")
 
-    # Boss fight
     boss = {
-    "name": "Spidorah",
-    "hp":125,
-    "golddrop":0,
-    "dmgperhit":23,
-    "loot":[""]
-
-        
+        "name": "Spidorah",
+        "hp": 125,
+        "golddrop": 0,
+        "dmgperhit": 23,
+        "loot": [""]
     }
     boss['current_hp'] = boss['hp']
     print(f"A wild {boss['name']} appears!")

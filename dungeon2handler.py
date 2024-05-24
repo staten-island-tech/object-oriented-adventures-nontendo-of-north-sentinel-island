@@ -41,7 +41,7 @@ def spawn_enemy(enemies):
     return random.choice(enemies)
 
 def main():
-    #
+    #Elisa
     player = Player("Player")
     enemies = load_enemies('dungeon2enemies.json')  
 
@@ -100,7 +100,7 @@ def main():
             elif choice.upper() == 'E':
                 if random.random() < 0.05:
                     print("You managed to escape!")
-                    return
+                    break
                 else:
                     print("Failed to escape!")
 
