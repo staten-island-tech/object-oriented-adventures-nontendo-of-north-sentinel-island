@@ -5,9 +5,9 @@ import random
 class Player:
     def __init__(self, name):
         self.name = name
-        self.max_hp = 100
-        self.hp = 100
-        self.damage = 5
+        self.max_hp = 100000
+        self.hp = 100000
+        self.damage = 50
         self.gold = 25
         self.minor_potions = 1
         self.major_potions = 1
