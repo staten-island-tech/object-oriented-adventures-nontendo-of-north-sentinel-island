@@ -120,6 +120,7 @@ def main():
                             break
                         else:
                             print("Invalid choice. Please try again.")
+                        gameend.finale
                     return
             else:
                 print(f"{player.name} misses!")
