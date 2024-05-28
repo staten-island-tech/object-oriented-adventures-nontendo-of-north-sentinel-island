@@ -119,6 +119,7 @@ def main():
                         elif reward_choice.upper() == 'G':
                             player.gold += reward_choice.upper
                             print(f"You received 50 gold! Total gold: {player.gold}")
+                            return player.gold
                             break
                         else:
                             print("Invalid choice. Please try again.")
