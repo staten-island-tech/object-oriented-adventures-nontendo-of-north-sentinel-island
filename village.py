@@ -8,7 +8,6 @@ class village:
         villagequestion = input("What would you like to do? (Check manual, Shop, Explore, Dungeons): ")
         while villagequestion == "Shop":
             from shop import visit_shop
-            visit_shop
             break
         if villagequestion == "Explore":
             explore.explorationloop(village.enteringvillage)

@@ -3,10 +3,10 @@ import random
 
 
 class Player:
-    def __init__(self, name):
+    def __init__(self, name, max_hp=1000):
         self.name = name
-        self.max_hp = 100
-        self.hp = 100
+        self.max_hp = max_hp
+        self.hp = max_hp
         self.damage = 5
         self.gold = 25
         self.minor_potions = 1
@@ -87,7 +87,7 @@ def main():
                     print(f"{enemy['name']} attacks {player.name}!")
                     player.take_damage(enemy['dmgperhit'])
                     if player.hp <= 0:
-                        print("You have been died :( ")
+                        print("You have been diedd :( ")
                         break
                 else:
                     print(f"{enemy['name']} misses!")
