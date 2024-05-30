@@ -1,4 +1,4 @@
-
+from playerclass import player
 
 def visit_shop():
     print("Welcome to the shop!")
@@ -17,16 +17,16 @@ def visit_shop():
 
     choose = input("What do you want to buy? ")
     if choose == '1':
-        if Player.gold >= 15:
-            Player.minor_potions += 1
-            Player.gold -= 15
+        if player.gold >= 15:
+            player.minor_potions += 1
+            player.gold -= 15
             print("You bought a Minor Potion.")
         else:
             print("Not enough gold :( ")
     elif choose == '2':
-        if Player.gold >= 60:
-            Player.major_potions += 1
-            Player.gold -= 60
+        if player.gold >= 60:
+            player.major_potions += 1
+            player.gold -= 60
             print("You bought a Major Potion.")
         else:
             print("Not enough gold!")
@@ -38,9 +38,9 @@ def visit_shop():
         if upgrade_choose in upgrade_costs:
             cost = upgrade_costs[upgrade_choose]
             percentage = upgrade_percentages[upgrade_choose]
-            if Player.gold >= cost:
-                Player.upgrade_damage(percentage)
-                Player.gold -= cost
+            if player.gold >= cost:
+                player.upgrade_damage(percentage)
+                player.gold -= cost
                 print(f"You upgraded your damage by {percentage}%.")
             else:
                 print("Not enough gold!")
@@ -54,9 +54,9 @@ def visit_shop():
         if upgrade_choose in upgrade_costs:
             cost = upgrade_costs[upgrade_choose]
             percentage = upgrade_percentages[upgrade_choose]
-            if Player.gold >= cost:
-                Player.upgrade_max_hp(percentage)
-                Player.gold -= cost
+            if player.gold >= cost:
+                player.upgrade_max_hp(percentage)
+                player.gold -= cost
                 print(f"You upgraded your max HP by {percentage}%.")
             else:
                 print("Not enough gold!")

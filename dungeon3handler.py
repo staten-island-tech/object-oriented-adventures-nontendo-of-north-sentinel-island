@@ -1,7 +1,7 @@
 import json
 import random
 from playerclass import *
-from congrats import gameend
+
 
 def load_enemies(filename):
     with open(filename, 'r') as file:
@@ -119,7 +119,6 @@ def main():
                             break
                         else:
                             print("Invalid choice. Please try again.")
-                        gameend.finale
                     return
             else:
                 print(f"{player.name} misses!")
