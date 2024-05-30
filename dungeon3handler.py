@@ -1,7 +1,7 @@
 import json
 import random
-from combathandler import Player
-    
+from playerclass import *
+from congrats import gameend
 
 def load_enemies(filename):
     with open(filename, 'r') as file:
@@ -12,7 +12,6 @@ def spawn_enemy(enemies):
     return random.choice(enemies)
 
 def main():
-    player = Player("Player")
     enemies = load_enemies('dungeon3enemies.json')  
 
     for _ in range(10):
