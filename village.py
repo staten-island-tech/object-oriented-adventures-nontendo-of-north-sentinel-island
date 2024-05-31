@@ -16,8 +16,13 @@ class village:
         villagequestion = input("What would you like to do? (Check manual, Shop, Explore, Dungeons): ")
         while villagequestion == "Shop":
             from shop import visit_shop
-            visit_shop
-            break
+            visit_shop()
+            shopagain = input('Do you wish to shop again? (Y/N) :')
+            if shopagain == "N":
+                break
+            while shopagain == "Y":
+                print(" ")
+                break
         if villagequestion == "Explore":
             explorationloop()
             village.enteringvillage()

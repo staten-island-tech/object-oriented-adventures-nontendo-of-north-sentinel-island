@@ -14,6 +14,7 @@ def visit_shop():
     print("   b. Tier 2 - +10% max hp, cost: 50 gold")
     print("   c. Tier 3 - +15% max hp, cost: 75 gold")
     print("   d. Tier 4 - +20% max hp, cost: 100 gold")
+    print("5. Cancel")
 
     choose = input("What do you want to buy? ")
     if choose == '1':
@@ -21,6 +22,7 @@ def visit_shop():
             player.minor_potions += 1
             player.gold -= 15
             print("You bought a Minor Potion.")
+            print(f"Your total gold is now {player.gold}")
         else:
             print("Not enough gold :( ")
     elif choose == '2':
@@ -28,6 +30,7 @@ def visit_shop():
             player.major_potions += 1
             player.gold -= 60
             print("You bought a Major Potion.")
+            print(f"Your total gold is now {player.gold}")
         else:
             print("Not enough gold!")
     elif choose == '3':
@@ -42,6 +45,7 @@ def visit_shop():
                 player.upgrade_damage(percentage)
                 player.gold -= cost
                 print(f"You upgraded your damage by {percentage}%.")
+                print(f"Your total gold is now {player.gold}")
             else:
                 print("Not enough gold!")
         else: 
@@ -58,8 +62,8 @@ def visit_shop():
                 player.upgrade_max_hp(percentage)
                 player.gold -= cost
                 print(f"You upgraded your max HP by {percentage}%.")
+                print(f"Your total gold is now {player.gold}")
             else:
                 print("Not enough gold!")
         else:
             print("Invalid choice!")
-visit_shop()
