@@ -34,21 +34,21 @@ class village:
                     from dungeon1handler import main
                     main
                 elif areyousure == "N":
-                    break
+                    print("Coward...")
             if dungeonquestion123 == "2":
                 areyousure = input("Are you sure you wish to take on the dungeon? It is highly reccomended to stock up on potions and upgrades beforehand (Y/N) :")
                 if areyousure == "Y":
                     from dungeon2handler import main
                     main
                 elif areyousure == "N":
-                    break
+                    print("Coward...")
             if dungeonquestion123 == "3":
                 areyousure = input("Are you sure you wish to take on the dungeon? It is highly reccomended to stock up on potions and upgrades beforehand (Y/N) :")
                 if areyousure == "Y":
                     from dungeon3handler import main
                     main
                 elif areyousure == "N":
-                    break
+                    print("Coward...")
                     
         elif villagequestion == "Check manual":
             print(stuff)
