@@ -61,8 +61,23 @@ def main():
                     print(f"{enemy['name']} attacks {player.name}!")
                     player.take_damage(enemy['dmgperhit'])
                     if player.hp <= 0:
+                        player.max_hp = 100
+                        player.hp = 100
+                        player.gold -= 50
+                        player.minor_potions -=1
+                        player.major_potions -=1
                         print("You have been died :( ")
+                        print("You must really suck huh ... For that im gonna give you some nerfs >:)")
+                        print(" ")
+                        print("Max HP is now back to 100")
+                        print(" ")
+                        print("Player gold is reduced by 50")
+                        print(" ")
+                        print("Major and Minor Potions are reduced by 1 each")
+                        print(" ")
+                        print("Dignity decreased by 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
                         break
+                        
                 else:
                     print(f"{enemy['name']} misses!")
                 

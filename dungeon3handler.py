@@ -11,6 +11,13 @@ def load_enemies(filename):
 def spawn_enemy(enemies):
     return random.choice(enemies)
 
+def finalfantasycomplete():
+    print("YOU HAVE SLAYED ALL 3 BOSSES AND SAVED NORTH SENTINAL ISLAND!!")
+    print("For this.. we have granted you the greatest power of all .... ZIJUN MA'S AWESOME SAUCE BLADE (it does 172² x 0.45 damage)")
+    player.damage = 13312.8
+    print("You bask in the glory of the blade, soaking in its power")
+    print("You have recieved Zijun Ma's Awesome Sauce Blade!")
+
 def main():
     enemies = load_enemies('dungeon3enemies.json')  
 
@@ -106,6 +113,7 @@ def main():
                 if boss['current_hp'] <= 0:
                     print(f"{boss['name']} defeated!")
                     while True:
+                        finalfantasycomplete()
                         reward_choice = input("Choose your reward: H for Permanent HP Buff, D for Permanent DMG Buff, G for Gold Drop: ")
                         if reward_choice.upper() == 'H':
                             player.upgrade_max_hp(50)
@@ -127,7 +135,21 @@ def main():
                 print(f"{boss['name']} attacks {player.name}!")
                 player.take_damage(boss['dmgperhit'])
                 if player.hp <= 0:
-                    print("You have died :( ")
+                    player.max_hp = 100
+                    player.hp = 100
+                    player.gold -= 50
+                    player.minor_potions -=1
+                    player.major_potions -=1
+                    print("You have been died :( ")
+                    print("You must really suck huh ... For that im gonna give you some nerfs >:)")
+                    print(" ")
+                    print("Max HP is now back to 100")
+                    print(" ")
+                    print("Player gold is reduced by 50")
+                    print(" ")
+                    print("Major and Minor Potions are reduced by 1 each")
+                    print(" ")
+                    print("Dignity decreased by 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
                     return
             else:
                 print(f"{boss['name']} misses!")
