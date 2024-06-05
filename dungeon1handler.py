@@ -1,8 +1,7 @@
 import json
 import random
-from combathandler import Player
+from playerclass import *
 
-    
 
 def load_enemies(filename):
     with open(filename, 'r') as file:
@@ -13,7 +12,7 @@ def spawn_enemy(enemies):
     return random.choice(enemies)
 
 def main():
-    player = Player("Player")
+    #Elisa
     enemies = load_enemies('dungeon1enemies.json')  
 
     for _ in range(10):
@@ -82,6 +81,9 @@ def main():
         "golddrop": 0,
         "dmgperhit": 14,
         "loot": [""]
+
+
+        
     }
     boss['current_hp'] = boss['hp']
     print(f"A wild {boss['name']} appears!")
@@ -117,8 +119,9 @@ def main():
                             player.upgrade_damage(10)
                             break
                         elif reward_choice.upper() == 'G':
-                            player.gold += reward_choice.upper
+                            player.gold += 50
                             print(f"You received 50 gold! Total gold: {player.gold}")
+                            return player.gold
                             break
                         else:
                             print("Invalid choice. Please try again.")

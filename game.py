@@ -1,5 +1,6 @@
 from player import user
-from village import village
+from village import *
+from playerclass import *
 
 user.intro()
 village.enteringvillage()
