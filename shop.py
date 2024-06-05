@@ -23,6 +23,7 @@ def visit_shop():
             player.gold -= 15
             print("You bought a Minor Potion.")
             print(f"Your total gold is now {player.gold}")
+            print(f"Your Minor Potion count is now {player.minor_potions}")
         else:
             print("Not enough gold :( ")
     elif choose == '2':
@@ -31,6 +32,7 @@ def visit_shop():
             player.gold -= 60
             print("You bought a Major Potion.")
             print(f"Your total gold is now {player.gold}")
+            print(F"Your Major Potion count is now {player.major_potions}")
         else:
             print("Not enough gold!")
     elif choose == '3':
@@ -46,6 +48,7 @@ def visit_shop():
                 player.gold -= cost
                 print(f"You upgraded your damage by {percentage}%.")
                 print(f"Your total gold is now {player.gold}")
+                print(F"Your damage is now {player.damage}")
             else:
                 print("Not enough gold!")
         else: 
@@ -63,6 +66,7 @@ def visit_shop():
                 player.gold -= cost
                 print(f"You upgraded your max HP by {percentage}%.")
                 print(f"Your total gold is now {player.gold}")
+                print(F"Your max HP is now {player.max_hp}")
             else:
                 print("Not enough gold!")
         else:
