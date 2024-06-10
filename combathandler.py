@@ -24,20 +24,20 @@ def main():
 
         while enemy['current_hp'] > 0 and player.hp > 0:
             choice = input("Choose an action H for heal, C for combat, E for escape: ")
-            if choice.upper() == 'H' or "h":
+            if choice.upper() == 'H':
                 potion_choice = input("Do you want to use a minor or major potion? M for Minor, B for Major: ")
-                if potion_choice == "M" or "m" and player.minor_potions > 0:
+                if potion_choice == "M" and player.minor_potions > 0:
                     player.heal(player.max_hp * 0.25)
                     player.minor_potions -= 1
                     print(f"You now have a total of {player.minor_potions} potions")
-                elif potion_choice == "B" or "b" and player.major_potions > 0:
+                elif potion_choice == "B" and player.major_potions > 0:
                     player.heal(player.max_hp)
                     player.major_potions -= 1
                     print(f"You now have a total of {player.major_potions}")
                 else: 
                     print("You have no potions left!")
             
-            elif choice.upper() == 'C' or "c":
+            elif choice.upper() == 'C':
                 if random.random() <= 0.8:
                     print(f"{player.name} attacks {enemy['name']}")
                     enemy['current_hp'] -= player.damage
@@ -81,7 +81,7 @@ def main():
                 else:
                     print(f"{enemy['name']} misses!")
                 
-            elif choice.upper() == 'E' or "e":
+            elif choice.upper() == 'E':
                 if random.random() < 0.05:
                     print("You managed to escape!")
                     break
@@ -90,7 +90,7 @@ def main():
        
         if player.hp > 0:
             play_again = input("Do you want another instance of combat? (Y/N): ")
-            if play_again.upper() == 'N' or "n":
+            if play_again.upper() == 'N':
                 print("You decide to lay down your sword and return to the village... COWARD!")
                 break
         else:
