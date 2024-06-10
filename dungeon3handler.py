@@ -32,20 +32,20 @@ def main():
 
         while enemy['current_hp'] > 0 and player.hp > 0:
             choice = input("Choose an action H for heal, C for combat, E for escape: ")
-            if choice.upper() == 'H':
+            if choice.upper() == 'H' or "h":
                 potion_choice = input("Do you want to use a minor or major potion? M for Minor, B for Major: ")
-                if potion_choice.upper() == "M" and player.minor_potions > 0:
+                if potion_choice.upper() == "M" or "m" and player.minor_potions > 0:
                     player.heal(player.max_hp * 0.25)
                     player.minor_potions -= 1
                     print(f"You now have a total of {player.minor_potions} minor potions")
-                elif potion_choice.upper() == "B" and player.major_potions > 0:
+                elif potion_choice.upper() == "B" or "b" and player.major_potions > 0:
                     player.heal(player.max_hp)
                     player.major_potions -= 1
                     print(f"You now have a total of {player.major_potions} major potions")
                 else: 
                     print("You have no potions left!")
             
-            elif choice.upper() == 'C':
+            elif choice.upper() == 'C' or "c":
                 if random.random() <= 0.8:
                     print(f"{player.name} attacks {enemy['name']}")
                     enemy['current_hp'] -= player.damage
@@ -73,7 +73,7 @@ def main():
                 else:
                     print(f"{enemy['name']} misses!")
                 
-            elif choice.upper() == 'E':
+            elif choice.upper() == 'E' or "e":
                 if random.random() < 0.05:
                     print("You managed to escape!")
                     break
@@ -92,20 +92,20 @@ def main():
 
     while boss['current_hp'] > 0 and player.hp > 0:
         choice = input("Choose an action H for heal, C for combat, E for escape: ")
-        if choice.upper() == 'H':
+        if choice.upper() == 'H' or "h":
             potion_choice = input("Do you want to use a minor or major potion? M for Minor, B for Major: ")
-            if potion_choice.upper() == "M" and player.minor_potions > 0:
+            if potion_choice.upper() == "M" or "m" and player.minor_potions > 0:
                 player.heal(player.max_hp * 0.25)
                 player.minor_potions -= 1
                 print(f"You now have a total of {player.minor_potions} minor potions")
-            elif potion_choice.upper() == "B" and player.major_potions > 0:
+            elif potion_choice.upper() == "B" or "b" and player.major_potions > 0:
                 player.heal(player.max_hp)
                 player.major_potions -= 1
                 print(f"You now have a total of {player.major_potions} major potions")
             else: 
                 print("You have no potions left!")
         
-        elif choice.upper() == 'C':
+        elif choice.upper() == 'C' or "c":
             if random.random() <= 0.8:
                 print(f"{player.name} attacks {boss['name']}")
                 boss['current_hp'] -= player.damage
@@ -115,13 +115,13 @@ def main():
                     while True:
                         finalfantasycomplete()
                         reward_choice = input("Choose your reward: H for Permanent HP Buff, D for Permanent DMG Buff, G for Gold Drop: ")
-                        if reward_choice.upper() == 'H':
+                        if reward_choice.upper() == 'H' or "h":
                             player.upgrade_max_hp(50)
                             break
-                        elif reward_choice.upper() == 'D':
+                        elif reward_choice.upper() == 'D' or "d":
                             player.upgrade_damage(10)
                             break
-                        elif reward_choice.upper() == 'G':
+                        elif reward_choice.upper() == 'G' or "g":
                             player.gold += 50
                             print(f"You received 50 gold! Total gold: {player.gold}")
                             break
@@ -154,7 +154,7 @@ def main():
             else:
                 print(f"{boss['name']} misses!")
             
-        elif choice.upper() == 'E':
+        elif choice.upper() == 'E' or "e":
             if random.random() < 0.05:
                 print("You managed to escape!")
                 return
