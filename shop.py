@@ -71,3 +71,9 @@ def visit_shop():
                 print("Not enough gold!")
         else:
             print("Invalid choice!")
+<<<<<<< HEAD
+=======
+    elif choose == "IfIWereARicherMan":
+        player.gold + 69696969696969696969
+
+>>>>>>> parent of bb883c5 (DA)
