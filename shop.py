@@ -73,5 +73,4 @@ def visit_shop():
             print("Invalid choice!")
     elif choose == "IfIWereARicherMan":
         player.gold + 69696969696969696969
-        print('hehehe...')
 
